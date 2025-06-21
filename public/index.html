@@ -31,6 +31,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      width: 100%;
     }
 
     .genkou {
@@ -39,12 +40,15 @@
       display: grid;
       grid-template-columns: repeat(20, 1fr);
       grid-template-rows: repeat(20, 1fr);
-      width: 500px;
-      height: 650px;
-      font-size: 20px;
+      width: 90vw;
+      max-width: 500px;
+      aspect-ratio: 10 / 13;
+      font-size: 3vw;
+      max-height: 90vh;
       padding: 10px;
       background-color: transparent;
       gap: 0px;
+      margin: 0 auto;
     }
 
     .genkou span {
@@ -58,6 +62,7 @@
       width: 100%;
       height: 100%;
       box-sizing: border-box;
+      font-size: inherit;
     }
 
     .genkou span::before,
@@ -81,6 +86,12 @@
       top: 0;
       left: 50%;
       transform: translateX(-50%);
+    }
+
+    @media (max-width: 600px) {
+      .genkou {
+        font-size: 4vw;
+      }
     }
   </style>
 </head>
